@@ -1,0 +1,236 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  color: #17324a;
+  background: #e8f9ff;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: #e8f9ff;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100svh;
+  margin: 0;
+  padding: max(28px, env(safe-area-inset-top)) 18px max(36px, env(safe-area-inset-bottom));
+  background:
+    radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.95) 0 8%, transparent 22%),
+    linear-gradient(155deg, #f8fdff 0%, #d9f5ff 56%, #c8edfa 100%);
+}
+
+body::before,
+body::after {
+  position: fixed;
+  z-index: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 48% 52% 44% 56%;
+  background: rgba(117, 204, 230, 0.18);
+  content: "";
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+body::before {
+  top: -70px;
+  right: -50px;
+  transform: rotate(20deg);
+}
+
+body::after {
+  bottom: -85px;
+  left: -65px;
+  transform: rotate(-18deg);
+}
+
+.max-page {
+  background:
+    radial-gradient(circle at 82% 8%, rgba(255, 255, 255, 0.98) 0 7%, transparent 19%),
+    linear-gradient(155deg, #fffdf5 0%, #fff3bf 54%, #ffe197 100%);
+}
+
+.max-page::before,
+.max-page::after {
+  background: rgba(241, 179, 46, 0.17);
+}
+
+.wallpaper-card,
+.hub {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 540px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #2785a4;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.max-page .eyebrow {
+  color: #a66a00;
+}
+
+h1 {
+  margin: 0;
+  color: #17324a;
+  font-size: clamp(1.72rem, 7.2vw, 2.45rem);
+  line-height: 1.28;
+  letter-spacing: 0.015em;
+}
+
+.lead {
+  margin: 12px 0 24px;
+  color: #526c7e;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.wallpaper-frame {
+  position: relative;
+  width: min(78vw, 360px);
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 9px solid rgba(255, 255, 255, 0.96);
+  border-radius: 32px;
+  background: #ffffff;
+  box-shadow: 0 22px 55px rgba(44, 107, 130, 0.2), 0 4px 14px rgba(34, 85, 102, 0.12);
+}
+
+.max-page .wallpaper-frame {
+  box-shadow: 0 22px 55px rgba(166, 106, 0, 0.2), 0 4px 14px rgba(120, 83, 13, 0.12);
+}
+
+.wallpaper-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f8fdff;
+  -webkit-touch-callout: default;
+  user-select: auto;
+}
+
+.max-page .wallpaper-image {
+  background: #fffdf5;
+}
+
+.max-badge {
+  position: absolute;
+  z-index: 1;
+  top: 18px;
+  right: 18px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  color: #6f4700;
+  background: rgba(255, 235, 157, 0.94);
+  box-shadow: 0 6px 18px rgba(111, 71, 0, 0.16);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.save-guide {
+  margin: 22px 0 14px;
+  color: #365467;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.download-button {
+  display: inline-flex;
+  min-width: min(100%, 310px);
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 26px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: #258db1;
+  box-shadow: 0 10px 24px rgba(37, 141, 177, 0.28);
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.max-page .download-button {
+  color: #523500;
+  background: #f4bd45;
+  box-shadow: 0 10px 24px rgba(180, 115, 0, 0.24);
+}
+
+.download-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 5px 12px rgba(37, 141, 177, 0.22);
+}
+
+.hub {
+  padding-top: clamp(48px, 14vh, 130px);
+}
+
+.result-links {
+  display: grid;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.result-link {
+  display: grid;
+  gap: 6px;
+  min-height: 116px;
+  place-content: center;
+  border: 3px solid rgba(255, 255, 255, 0.94);
+  border-radius: 26px;
+  box-shadow: 0 14px 32px rgba(44, 107, 130, 0.13);
+  text-decoration: none;
+}
+
+.standard-link {
+  color: #1f718e;
+  background: rgba(207, 242, 252, 0.92);
+}
+
+.max-link {
+  color: #7c5100;
+  background: rgba(255, 232, 153, 0.94);
+}
+
+.result-label {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.result-link strong {
+  font-size: 1.08rem;
+}
+
+@media (min-width: 720px) {
+  body {
+    padding-top: 46px;
+  }
+
+  .wallpaper-frame {
+    width: 330px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .download-button {
+    transition: none;
+  }
+}
